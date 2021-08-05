@@ -1,6 +1,4 @@
-body{
-    font-size: larger;
-}
+body{ font-size: larger;}
 .left{
     width: 30%;
     display: inline-block;
