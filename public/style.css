@@ -1,0 +1,12 @@
+body{
+    font-size: larger;
+}
+.left{
+    width: 30%;
+    display: inline-block;
+}
+.right{
+    width: 60%;
+    height: 100px;
+    display: inline-block;
+}
