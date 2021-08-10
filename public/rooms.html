@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Commutify</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="room-style.css">
 </head>
 <body>
     <div class="interface">
         <header><span>commutify</span><a href="index.html">Leave Room</a></header>
-        <div class="left"> 
-            <h3>Room Name:</h3> <h2 id="room-name"></h2>
-            <h3>Users</h3><ul id="users"></ul>
-          </div>
-        <div class="right" id="right"><div class="message"></div></div>
-            <footer><form id="text"><input id="msg" type="text" placeholder="Enter Message" required></input>
-                    <button class="btn">Send</button></form>
-            </footer>
+        <div class="main">
+            <div class="left"> 
+                <h3>Room Name:</h3> <h2 id="room-name"></h2>
+                <h3>Users</h3><ul id="users"></ul>
+            </div>
+
+            <div class="right" id="right">
+
+                <div style="height: 690px; overflow-y: scroll;"> 
+                    <div id="messages">
+                    <div id="texts" style="width: fit-content;"></div>
+                    </div>
+                </div>
+
+                <div class="send">
+                    <form id="text"><input id="msg" type="text" placeholder="Enter Message" required></input>
+                        <button class="btn"><img src="./images/arrow.png"></img></button></form>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
+        
+           
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./main.js"></script>
