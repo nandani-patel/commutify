@@ -1,7 +1,10 @@
-
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
+
+const format = require('./public/messages');
+const {usersjoined, currentuser}= require('./public/users');
+
 
 const app = express();
 const server = http.createServer(app);
@@ -13,17 +16,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 io.on('connection', socket => {
 
-    socket.on('disconnect', ()=>{
-        io.emit('message',`a user has left the chat`);
+    socket.on('joinRoom', ({username,room}) => {
+
+        const user = usersjoined(username,room, socket.id);
+        socket.join(user.room);
+
+        socket.emit('message',format('commutify admin' ,`hello ${username} , welcome to commutify!`));
+        socket.broadcast.to(user.room).emit('message',format('commutify admin' ,`${username} has entered the chat`));
+
     });
 
-    socket.emit('message','welcome to commutify!');
-
-    socket.broadcast.emit('message',`a user has entered the chat`);
+    socket.on('disconnect', ()=>{
+        io.emit('message', format('commutify admin' , `a user has left the chat`));
+    });
 
     socket.on('chatmsg', (text)=>{
+
+        const curruser = currentuser(socket.id);
+
         console.log(text);
-        io.emit('message',text);
+        io.to(curruser.room).emit('message',format(`${curruser.username}` ,text));
     });
 
 });

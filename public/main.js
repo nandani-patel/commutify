@@ -1,5 +1,13 @@
 const socket = io();
 
+const { username, room } = Qs.parse(location.search, {
+    ignoreQueryPrefix: true,
+});
+
+console.log(username,room);
+
+socket.emit('joinRoom', {username , room});
+
 socket.on('message',message => {
     console.log(message);
 
@@ -28,9 +36,9 @@ function send(message){
     div.classList.add('texts');
 
     div.innerHTML=
-    `<div class="name">NAME</div>
-    <div class="m">${message}</div>
-    <div class="time">11:45pm</div>`;
+    `<div class="name">${message.username}</div>
+    <div class="m">${message.text}</div>
+    <div class="time">${message.time}</div>`;
 
     chatmessage.appendChild(div);
 
