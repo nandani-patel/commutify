@@ -7,8 +7,7 @@ socket.on('message',message => {
 });
 
 const  chat = document.getElementById('text');
-
-const chatmessage = document.getElementById('right');
+const chatmessage = document.getElementById('messages');
 
 
 chat.addEventListener('submit', (e)=>{
@@ -26,10 +25,13 @@ chat.addEventListener('submit', (e)=>{
 function send(message){
 
     const div = document.createElement('div');
-    div.classList.add('message');
+    div.classList.add('texts');
 
-    div.innerHTML=`${message}`;
+    div.innerHTML=
+    `<div class="name">NAME</div>
+    <div class="m">${message}</div>
+    <div class="time">11:45pm</div>`;
 
     chatmessage.appendChild(div);
-    
+
 };
