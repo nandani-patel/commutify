@@ -8,6 +8,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 .desc{
     margin-left: 1cm;
@@ -19,12 +20,12 @@ body{
     box-shadow: 10px 10px 15px 15px rgba(0, 0, 0, 0.144);
     font-size: 0.5cm;
 }
-.modal{
+#modal{
     margin-left: 2cm;
+    height: 450px;
     width: 20%;
-    height: 10cm;
-    box-shadow: 10px 10px 15px 15px rgba(0, 0, 0, 0.144);
-    /* background-color: black; */
+    transition: 1s;
+    margin-top: 50px;
 }
 header{
     font-size: 1cm;
@@ -37,3 +38,54 @@ header{
     padding: 12px 12px;
     margin-top: 1.5cm;
 }
+
+form {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    height: 450px;
+    width: 100%;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+  }
+  form p {
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 0.8cm;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+    input, select ,.btn, #check{
+    background: transparent;
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.459);
+    border-radius: 25cm;
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  #check{
+    margin-top: 70px;
+}
+  form label{
+      margin-bottom: 10px;
+  }
+  form .btn{
+      margin-top: 50px;
+  }
+  ::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+    

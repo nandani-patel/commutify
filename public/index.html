@@ -7,35 +7,49 @@
 </head>
 <body style="background-image: url('./images/bg.jpg'); background-size: cover;">
     <div class="desc">
+
         <header><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                 class="bi bi-people-fill" viewBox="0 0 16 16">
                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                 <path fill-rule="evenodd"
                     d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
                 <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-            </svg> COMMUTIFY </header>
+            </svg> COMMUTIFY 
+        </header>
+
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aut deserunt quam consectetur quidem sit
         assumenda nisi, quas expedita earum a asperiores tempora nemo corporis necessitatibus quo maxime sint aspernatur
         tenetur. Labore nesciunt blanditiis itaque assumenda nisi? Aliquam odio magnam ut, expedita at ipsa autem
         quaerat doloribus accusamus, ab maxime!
-        <footer><button style="float: right;">check it out!</button></footer>  
+
+        <footer><button id="check" style="float: right;">check it out!</button></footer> 
+
     </div>
-    <div class="modal">
+    <div id="modal">
         <form action="rooms.html">
-            <div class="form, box"><label for="username">Username</label><input type="text" name="username" id="username"
-                    placeholder="Enter your username..." required /></div>
+            <p>Welcome!</p>
+
+            <div class="form, box">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username..." required />
+            </div>
+
             <div class="form, box"><label for="room">Select Room</label>
                 <select name="room" id="room">
-                    <option value="test1">test room 1</option>
+                    <option value="test1">Test room 1</option>
                     <option value="test2">test room 2</option>
                     <option value="test3">test room 3</option>
                     <option value="test4">test room 4</option>
                     <option value="test5">test room 5</option>
                 </select>
             </div>
+
             <button type="submit" class="btn">Join Room</button>
+            
         </form>
     </div>
+
+   <script src="index.js"></script>
 </body>
 
 </html>
