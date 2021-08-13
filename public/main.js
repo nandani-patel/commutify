@@ -43,3 +43,5 @@ function send(message){
     chatmessage.appendChild(div);
 
 };
+
+
