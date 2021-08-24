@@ -10,6 +10,14 @@ function currentuser(id){
     return users.find(userdata => userdata.id === id);
 }
 
+function userleft(id) {
+    const index = users.findIndex(user => user.id === id);
+  
+    if (index !== -1) {
+      return users.splice(index, 1)[0];
+    }
+  }
+
 module.exports = {
-    usersjoined,currentuser
+    usersjoined,currentuser,userleft
 }
