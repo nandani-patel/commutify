@@ -1,56 +1,57 @@
 *{
     box-sizing: border-box;
-    margin: 0; padding: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
 }
 .main{
+    height: 550px;
+    width: 900px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.281);
+    margin-top: 60px;
     display: flex;
 }
 .left{
+    margin: 30px;
     width: 25%;
-    background-color: cadetblue;
-    vertical-align: top;
-    height: 770px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 .right{
-    width: 75%;
-    height: 100px;
-    background-color: rgb(76, 76, 122);
-    vertical-align: top;
-    height: 700px;
+    margin: 30px;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
 }
-header{
-    background-color: burlywood;
-    height: 1.5cm;
+.send{
+   position: absolute;
+   bottom: 0px;
+   margin: 30px;
+   width: 90%;
 }
-form{
-   position: relative;
-   bottom: 0;
-}
-a{
-    float: right;
+#messages{
+   margin: 30px;
+   height: 70%;
+   background-color: #fff;
+   overflow-y: scroll;
 }
 .time{
     display: inline-block;
-    color: white;
+    color: black;
     font-size: 0.4cm;
     margin-top: 5px;
 }
 .m{
     display: inline-block;
     margin: 10px;
-    padding: 20px;
+    padding: 15px;
     background-color: black;
-    border-radius: 25px;
+    border-radius: 30px;
     border-top-left-radius: 0px;
     color: white;
-    font-size: 0.7cm;
+    font-size: 0.5cm;
     width: fit-content;
     max-width: 80%;
 }
 .name{
-    color: white;
+    color: black;
     margin-left: 15px;
 }
 input{
@@ -61,12 +62,8 @@ input{
 img{
     height: 40px;
 }
-.send{
-    background-color: thistle;
-    padding: 15px;
-}
 .btn{
     width: 9%;
-    background-color: thistle;
     border: none;
+    background-color: transparent;
 }
