@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Commutify</title>
     <link rel="stylesheet" href="room-style.css">
 </head>
-<body>
-    <div class="interface">
-        <header><span>commutify</span><a href="index.html">Leave Room</a></header>
-        <div class="main">
-            <div class="left"> 
-                <h3>Room Name:</h3> <h2 id="room-name"></h2>
-                <h3>Users</h3><ul id="users"></ul>
-            </div>
+<body style="background-image: url('./images/bg.jpg'); background-size: cover;">
 
-            <div class="right" id="right">
-
-                <div style="height: 690px; overflow-y: scroll;"> 
-                    <div id="messages">
-                    <div id="texts" style="width: fit-content;"></div>
-                    </div>
-                </div>
-
-                <div class="send">
-                    <form id="text"><input id="msg" type="text" placeholder="Enter Message" required></input>
-                        <button class="btn"><img src="./images/arrow.png"></img></button></form>
-                    </form>
-                </div>
+    <div class="main">
+        <div class="left">
+            <h2 id="room"></h2>
+            <ul id="list"></ul>
+            <div class="leave"></div>
+        </div>
+        <div class="right">
+            <div id="messages"></div>
+            <div class="send" style="align-self: baseline;">
+                <form id="text"><input id="msg" type="text" placeholder="Enter Message" required></input>
+                    <button class="btn"><img src="./images/arrow.png"></img></button>
+                </form>
             </div>
         </div>
     </div>
-        
-           
-    </div>
+
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
-      crossorigin="anonymous"
-    ></script>
+    src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+    integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+    crossorigin="anonymous">
+    </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="./main.js"></script>
 </body>

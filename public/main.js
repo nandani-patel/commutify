@@ -29,8 +29,13 @@ chat.addEventListener('submit', (e)=>{
     msg.value="";
 });
 
+function Scroll(){
+    chatmessage.scrollTop = chatmessage.scrollHeight;
+}setInterval(Scroll,500);
 
 function send(message){
+   
+   Scroll();
 
     const div = document.createElement('div');
     div.classList.add('texts');
@@ -44,4 +49,22 @@ function send(message){
 
 };
 
+socket.on('roomUsers', ({ room, users }) => {
+    outputRoomName(room);
+    outputUsers(users);
+  });
 
+const roomname = document.getElementById('room');
+function outputRoomName(room){
+    roomname.innerHTML = `${room}`;
+}
+  
+const userdisplay = document.getElementById('list');
+function outputUsers(users) {
+    userdisplay.innerHTML = '';
+    users.forEach((user) => {
+      const li = document.createElement('li');
+      li.innerText = user.username;
+      userdisplay.appendChild(li);
+    });
+  }

@@ -17,7 +17,11 @@ function userleft(id) {
       return users.splice(index, 1)[0];
     }
   }
+  
+  function getRoomUsers(room) {
+    return users.filter(user => user.room === room);
+  }
 
 module.exports = {
-    usersjoined,currentuser,userleft
+    usersjoined,currentuser,userleft,getRoomUsers
 }
