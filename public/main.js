@@ -46,7 +46,7 @@ function send(message){
 
     chatmessage.appendChild(div);
 
-    // chatmessage.scrollTop = chatmessage.scrollHeight;
+    chatmessage.scrollTop = chatmessage.scrollHeight;
     // Scroll();
 };
 
