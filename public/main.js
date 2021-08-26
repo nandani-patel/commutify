@@ -68,4 +68,10 @@ function outputUsers(users) {
       li.innerText = user.username;
       userdisplay.appendChild(li);
     });
-  }
+}
+
+const leave = document.getElementById('leave');
+
+leave.addEventListener('click',()=>{
+    window.location = '../index.html';
+})
