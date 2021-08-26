@@ -25,17 +25,16 @@ chat.addEventListener('submit', (e)=>{
     console.log(text);
     
     socket.emit('chatmsg', text);
-
     msg.value="";
 });
 
-function Scroll(){
-    chatmessage.scrollTop = chatmessage.scrollHeight;
-}setInterval(Scroll,500);
+// function Scroll(){
+//     chatmessage.scrollTop = chatmessage.scrollHeight;
+// }setInterval(Scroll,500);
 
 function send(message){
    
-   Scroll();
+    // chatmessage.scrollTop = chatmessage.scrollHeight;
 
     const div = document.createElement('div');
     div.classList.add('texts');
@@ -47,6 +46,8 @@ function send(message){
 
     chatmessage.appendChild(div);
 
+    // chatmessage.scrollTop = chatmessage.scrollHeight;
+    // Scroll();
 };
 
 socket.on('roomUsers', ({ room, users }) => {
